@@ -1,0 +1,73 @@
+// Imports
+	@import '_variables';
+	@import '_mixins';
+// END Imports
+
+// Extends
+	.dd-normal {
+    float: left;
+    width: 100%;
+    height: auto;
+	}
+
+	.dd-normal-box {
+    width: $large;
+    margin: 0 auto;
+
+    @media only screen and (max-width: $large) {
+    	width: $all;
+    }
+	}
+
+	.dd-normal-second {
+		float: left;
+		width: 100%;
+	}
+
+	.dd-back {
+		background-repeat: no-repeat;
+		background-image: $sprite;
+	}
+
+	.dd-sizing {
+		-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+
+	.dd-abscenter {
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	.dd-reset-sel {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-appearance: none;
+    text-indent: .01px;
+    text-overflow: '';
+    background-image: $arrow;
+    background-position: right center;
+    background-repeat: no-repeat;
+		width: 100%;
+	}
+
+	.dd-box-sel {
+    width: 100px;
+		overflow: hidden;
+	}
+
+	.dd-pattern-sel {
+		// @include border-radius(20px);
+		// border: 1px solid $gray-light;
+		// color: $gray-light;
+		padding: 8px 10px;
+    background-position: 90% center;
+    font-size: 12px;
+	}
+
+	.dd-fade {
+		@include fade;
+	}
+// END Extends
