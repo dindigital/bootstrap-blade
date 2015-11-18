@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Hello!</h1>
-  </body>
-</html>
+@extends('layouts.template')
+
+@section('css')
+  <link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
+@stop
+
+@section('js')
+  <script type="text/javascript" src="/assets/js/home.js"></script>
+@stop
+
+@section('content')
+  <h1>Hello!</h1>
+  @include('partials.example')
+@stop

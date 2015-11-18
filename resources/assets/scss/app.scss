@@ -1,172 +1,115 @@
+
 // Imports
-    @import 'modules/_fonts';
-    @import 'modules/_all';
+  @import 'modules/_fonts';
+  @import 'modules/_all';
 // END Imports
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: $main-link;
+
+  &:hover {
+    color: $main-link-hover;
+  }
+}
+
+a,
+button {
+  cursor: pointer;
+  @include fade;
 }
 
 html, body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font: 100% $font;
+  font: 100% $font;
+}
+
+strong {
+  font-weight: 900;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
+  border: none;
+}
+
+img,
+input,
+textarea,
+select,
+a,
+button {
+  border: none;
+  background-color: $transparent;
 }
 
 img:focus,
 input:focus,
 textarea:focus,
 select:focus,
-a:focus {
-    outline: none;
+a:focus,
+button:focus {
+  outline: none;
 }
 
-.main {
-    @extend .normal;
-    .box {
-        @extend .normal-box;
-    }
+figure {
+  margin: 0;
 }
 
-.all-center {
-    #position: absolute;
-    #top: 50%;
-    display: table-cell;
-    vertical-align: middle;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 100;
 }
 
-.center {
-    #position: relative;
-    #top: -50%;
+// GENERAL
+@-moz-document url-prefix() {
 }
 
-.slicknav_menu {
-    display: none;
+// GULP HACK
+$position: '#position';
+$top: '#top';
 
-    @media screen and (min-width: $mobile) {
-        display: none;
-    }
-
-    @media screen and (max-width: $mobile) {
-        display: block;
-    }
+.dd-all-center {
+  #{ $position }: absolute;
+  #{ $top }: 50%;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-// SECTION ALL - Seção geral
-    .all {
-        min-height: 100%;
-        position: relative;
-        width: 100%;
-        float: left;
+.dd-center {
+  #{ $position }: relative;
+  #{ $top }: -50%;
+}
 
-        .content {
-            padding-bottom: 100px;
-        }
-    }
-// END SECTION ALL
+// ======
+// ====== MAIN HEADER
+// ======
+#dd-wrapper {
+  position: relative;
+  min-height: 100%;
+}
 
-// HEADER
-    //MENU
+.dd-wrapper {
+  padding-bottom: $footer-height;
+}
 
-        header {
-            @extend .normal;
-            .nav {
-                width: 100%;
-                text-align: center;
-                padding: 0;
 
-                @media screen and (max-width: $mobile) {
-                    display: none;
-                }
-
-                li {
-                    display: inline-block;
-                    cursor: pointer;
-
-                    &:hover {
-                        ul {
-                            visibility: visible;
-                            opacity:1;
-                            transition-delay:0s;
-
-                            li {
-                                &:hover {
-                                    ul {
-                                        display: block;
-                                        visibility: visible;
-                                        opacity:1;
-                                        transition-delay:0s;
-                                    }
-                                }
-                                ul {
-                                    position: absolute;
-                                    visibility: hidden;
-                                    opacity:0;
-                                    transition:visibility 0s linear 0.5s,
-                                    opacity 0.5s linear;
-                                }
-                            }
-                        }
-                    }
-
-                    ul {
-                        position: absolute;
-                        visibility: hidden;
-                        opacity:0;
-                        transition:visibility 0s linear 0.5s,
-                        opacity 0.5s linear;
-                        padding-left: 0;
-
-                        li {
-                            display: block;
-                            position: relative;
-                            &:hover {
-                                ul {
-                                    visibility:visible;
-                                    opacity:1;
-                                }
-                            }
-
-                            ul {
-                                top: 0;
-                                left: 60px;
-                                padding-left: 0;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    // END MENU
-// END HEADER
-
-// FOOTER
-    footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: $footer-height;
-        background-color: #ccc;
-
-        @media screen and (max-width: $mobile) {
-
-        }
-
-        @media screen and (min-width: $large) {
-
-        }
-    }
-// END FOOTER
-
-// MEDIA QUERIES
+// ======
+// ====== MAIN FOOTER
+// ======
+footer#dd-main-footer {
+  // ...
+}
