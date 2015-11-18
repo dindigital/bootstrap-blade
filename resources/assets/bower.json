@@ -1,0 +1,9 @@
+{
+  "name" : "bootstrap-html",
+  "version": "0.0.1",
+  "dependencies" : {
+    "slicknav": "latest",
+    "jquery-maskmoney" : "3.0.2",
+    "select2" : "latest"
+  }
+}
