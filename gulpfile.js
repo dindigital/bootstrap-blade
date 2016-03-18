@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var imagemin = require('gulp-tinypng');
+var tinypng = require('gulp-tinypng-compress');
 
 // SASS
 gulp.task('sass', function () {
@@ -36,6 +38,17 @@ gulp.task('watch', function () {
   gulp.watch('./resources/assets/js/**/*.js', ['scripts']);
   gulp.watch('./resources/assets/js/services/*.js', ['scripts']);
   gulp.watch('./resources/assets/js/controllers/*.js', ['scripts']);
+});
+
+// TINY PNG - compactando imagens
+gulp.task('tiny', function () {
+  gulp.src('images/*.{png,jpg,jpeg}')
+    .pipe(tinypng({
+      key: 'e-LFigXOJXuxlObKAsukPhYwjvwbRQBu',
+      sigFile: 'images/.tinypng-sigs',
+      log: true
+    }))
+    .pipe(gulp.dest('./assets/img'));
 });
 
 gulp.task('default', ['sass' , 'scripts']);
