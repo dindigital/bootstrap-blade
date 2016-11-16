@@ -9,7 +9,7 @@
 		<title>Title</title>
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<meta name="robots" content="index, nofollow">
+		<meta name="robots" content="index, follow">
 
 		<link rel="shortcut icon" href="/favicon.ico">
 
