@@ -1,0 +1,1301 @@
+// import de arquivos padrão
+@import '../_base/_import';
+
+// Flexbox Grid
+// http://flexboxgrid.com/
+
+.l-gridFlex {
+  margin-right: pxToRem(5);
+  margin-left: pxToRem(5);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  @include flexboxItens(0, 1, auto);
+  @include flexboxContainer(flex, row, wrap, null, stretch, null);
+  // Small gaps
+  &_gapXSM {
+    @extend .l-gridFlex;
+    margin-right: pxToRem(10);
+    margin-left: pxToRem(10);
+
+    > .l-gridFlex_colXS, > .l-gridFlex_colXS-1, > .l-gridFlex_colXS-2, > .l-gridFlex_colXS-3, > .l-gridFlex_colXS-4, > .l-gridFlex_colXS-5, > .l-gridFlex_colXS-6,
+    > .l-gridFlex_colXS-7, > .l-gridFlex_colXS-8, > .l-gridFlex_colXS-9, > .l-gridFlex_colXS-10, > .l-gridFlex_colXS-11, > .l-gridFlex_colXS-12,
+    > .l-gridFlex_colXSM, > .l-gridFlex_colXSM-1, > .l-gridFlex_colXSM-2, > .l-gridFlex_colXSM-3, > .l-gridFlex_colXSM-4, > .l-gridFlex_colXSM-5, > .l-gridFlex_colXSM-6,
+    > .l-gridFlex_colXSM-7, > .l-gridFlex_colXSM-8, > .l-gridFlex_colXSM-9, > .l-gridFlex_colXSM-10, > .l-gridFlex_colXSM-11, > .l-gridFlex_colXSM-12,
+    > .l-gridFlex_colSM, > .l-gridFlex_colSM-1, > .l-gridFlex_colSM-2, > .l-gridFlex_colSM-3, > .l-gridFlex_colSM-4, > .l-gridFlex_colSM-5, > .l-gridFlex_colSM-6,
+    > .l-gridFlex_colSM-7, > .l-gridFlex_colSM-8, > .l-gridFlex_colSM-9, > .l-gridFlex_colSM-10, > .l-gridFlex_colSM-11, > .l-gridFlex_colSM-12,
+    > .l-gridFlex_colMD, > .l-gridFlex_colMD-1, > .l-gridFlex_colMD-2, > .l-gridFlex_colMD-3, > .l-gridFlex_colMD-4, > .l-gridFlex_colMD-5, > .l-gridFlex_colMD-6,
+    > .l-gridFlex_colMD-7, > .l-gridFlex_colMD-8, > .l-gridFlex_colMD-9, > .l-gridFlex_colMD-10, > .l-gridFlex_colMD-11, > .l-gridFlex_colMD-12, > .l-gridFlex_colLG,
+    > .l-gridFlex_colLG-1, > .l-gridFlex_colLG-2, > .l-gridFlex_colLG-3, > .l-gridFlex_colLG-4, > .l-gridFlex_colLG-5, > .l-gridFlex_colLG-6,
+    > .l-gridFlex_colLG-7, > .l-gridFlex_colLG-8, > .l-gridFlex_colLG-9, > .l-gridFlex_colLG-10, > .l-gridFlex_colLG-11, > .l-gridFlex_colLG-12 {
+      padding-right: pxToRem(10);
+      padding-left: pxToRem(10);
+    }
+  }
+  // Small gaps
+  &_gapSM {
+    @extend .l-gridFlex;
+    margin-right: pxToRem(10);
+    margin-left: pxToRem(10);
+
+    > .l-gridFlex_colXS, > .l-gridFlex_colXS-1, > .l-gridFlex_colXS-2, > .l-gridFlex_colXS-3, > .l-gridFlex_colXS-4, > .l-gridFlex_colXS-5, > .l-gridFlex_colXS-6,
+    > .l-gridFlex_colXS-7, > .l-gridFlex_colXS-8, > .l-gridFlex_colXS-9, > .l-gridFlex_colXS-10, > .l-gridFlex_colXS-11, > .l-gridFlex_colXS-12,
+    > .l-gridFlex_colSM, > .l-gridFlex_colSM-1, > .l-gridFlex_colSM-2, > .l-gridFlex_colSM-3, > .l-gridFlex_colSM-4, > .l-gridFlex_colSM-5, > .l-gridFlex_colSM-6,
+    > .l-gridFlex_colSM-7, > .l-gridFlex_colSM-8, > .l-gridFlex_colSM-9, > .l-gridFlex_colSM-10, > .l-gridFlex_colSM-11, > .l-gridFlex_colSM-12,
+    > .l-gridFlex_colMD, > .l-gridFlex_colMD-1, > .l-gridFlex_colMD-2, > .l-gridFlex_colMD-3, > .l-gridFlex_colMD-4, > .l-gridFlex_colMD-5, > .l-gridFlex_colMD-6,
+    > .l-gridFlex_colMD-7, > .l-gridFlex_colMD-8, > .l-gridFlex_colMD-9, > .l-gridFlex_colMD-10, > .l-gridFlex_colMD-11, > .l-gridFlex_colMD-12, > .l-gridFlex_colLG,
+    > .l-gridFlex_colLG-1, > .l-gridFlex_colLG-2, > .l-gridFlex_colLG-3, > .l-gridFlex_colLG-4, > .l-gridFlex_colLG-5, > .l-gridFlex_colLG-6,
+    > .l-gridFlex_colLG-7, > .l-gridFlex_colLG-8, > .l-gridFlex_colLG-9, > .l-gridFlex_colLG-10, > .l-gridFlex_colLG-11, > .l-gridFlex_colLG-12 {
+      padding-right: pxToRem(10);
+      padding-left: pxToRem(10);
+    }
+  }
+  // Medium gaps
+  &_gapMD {
+    @extend .l-gridFlex;
+    margin-right: -(pxToRem(30)/2);
+    margin-left: -(pxToRem(30)/2);
+
+    > .l-gridFlex_colXS, > .l-gridFlex_colXS-1, > .l-gridFlex_colXS-2, > .l-gridFlex_colXS-3, > .l-gridFlex_colXS-4, > .l-gridFlex_colXS-5, > .l-gridFlex_colXS-6,
+    > .l-gridFlex_colXS-7, > .l-gridFlex_colXS-8, > .l-gridFlex_colXS-9, > .l-gridFlex_colXS-10, > .l-gridFlex_colXS-11, > .l-gridFlex_colXS-12,
+    > .l-gridFlex_colSM, > .l-gridFlex_colSM-1, > .l-gridFlex_colSM-2, > .l-gridFlex_colSM-3, > .l-gridFlex_colSM-4, > .l-gridFlex_colSM-5, > .l-gridFlex_colSM-6,
+    > .l-gridFlex_colSM-7, > .l-gridFlex_colSM-8, > .l-gridFlex_colSM-9, > .l-gridFlex_colSM-10, > .l-gridFlex_colSM-11, > .l-gridFlex_colSM-12,
+    > .l-gridFlex_colMD, > .l-gridFlex_colMD-1, > .l-gridFlex_colMD-2, > .l-gridFlex_colMD-3, > .l-gridFlex_colMD-4, > .l-gridFlex_colMD-5, > .l-gridFlex_colMD-6,
+    > .l-gridFlex_colMD-7, > .l-gridFlex_colMD-8, > .l-gridFlex_colMD-9, > .l-gridFlex_colMD-10, > .l-gridFlex_colMD-11, > .l-gridFlex_colMD-12, > .l-gridFlex_colLG,
+    > .l-gridFlex_colLG-1, > .l-gridFlex_colLG-2, > .l-gridFlex_colLG-3, > .l-gridFlex_colLG-4, > .l-gridFlex_colLG-5, > .l-gridFlex_colLG-6,
+    > .l-gridFlex_colLG-7, > .l-gridFlex_colLG-8, > .l-gridFlex_colLG-9, > .l-gridFlex_colLG-10, > .l-gridFlex_colLG-11, > .l-gridFlex_colLG-12 {
+      padding-right: (pxToRem(30)/2);
+      padding-left: (pxToRem(30)/2);
+    }
+  }
+  // Reset gaps
+  &_gapNULL {
+    @extend .l-gridFlex;
+    margin: 0;
+
+    > div {
+      padding: 0;
+    }
+  }
+}
+
+.l-gridFlex.l-gridFlex--reverse {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  flex-direction: row-reverse;
+}
+
+.l-gridFlex_col.l-gridFlex_col--reverse {
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  flex-direction: column-reverse;
+}
+
+.l-gridFlex_colXS,
+.l-gridFlex_colXS-1,
+.l-gridFlex_colXS-2,
+.l-gridFlex_colXS-3,
+.l-gridFlex_colXS-4,
+.l-gridFlex_colXS-5,
+.l-gridFlex_colXS-6,
+.l-gridFlex_colXS-7,
+.l-gridFlex_colXS-8,
+.l-gridFlex_colXS-9,
+.l-gridFlex_colXS-10,
+.l-gridFlex_colXS-11,
+.l-gridFlex_colXS-12 {
+  padding-right: pxToRem(5);
+  padding-left: pxToRem(5);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  @include flexboxItens(0, 0, auto);
+  @include flexboxContainer(flex, row, wrap, null, stretch, stretch);
+
+  > div {
+    width: 100%; // Fixa a largura em 100% de todas DIVS da coluna. Fix para não influenciar em módulos de grids antigas.
+  }
+}
+
+.l-gridFlex_colXS {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.l-gridFlex_colXS-1 {
+  -ms-flex-preferred-size: 8.333%;
+  -webkit-flex-basis: 8.333%;
+  flex-basis: 8.333%;
+  max-width: 8.333%;
+}
+
+.l-gridFlex_colXS-2 {
+  -ms-flex-preferred-size: 16.667%;
+  -webkit-flex-basis: 16.667%;
+  flex-basis: 16.667%;
+  max-width: 16.667%;
+}
+
+.l-gridFlex_colXS-3 {
+  -ms-flex-preferred-size: 25%;
+  -webkit-flex-basis: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.l-gridFlex_colXS-4 {
+  -ms-flex-preferred-size: 33.333%;
+  -webkit-flex-basis: 33.333%;
+  flex-basis: 33.333%;
+  max-width: 33.333%;
+}
+
+.l-gridFlex_colXS-5 {
+  -ms-flex-preferred-size: 41.667%;
+  -webkit-flex-basis: 41.667%;
+  flex-basis: 41.667%;
+  max-width: 41.667%;
+}
+
+.l-gridFlex_colXS-6 {
+  -ms-flex-preferred-size: 50%;
+  -webkit-flex-basis: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.l-gridFlex_colXS-7 {
+  -ms-flex-preferred-size: 58.333%;
+  -webkit-flex-basis: 58.333%;
+  flex-basis: 58.333%;
+  max-width: 58.333%;
+}
+
+.l-gridFlex_colXS-8 {
+  -ms-flex-preferred-size: 66.667%;
+  -webkit-flex-basis: 66.667%;
+  flex-basis: 66.667%;
+  max-width: 66.667%;
+}
+
+.l-gridFlex_colXS-9 {
+  -ms-flex-preferred-size: 75%;
+  -webkit-flex-basis: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.l-gridFlex_colXS-10 {
+  -ms-flex-preferred-size: 83.333%;
+  -webkit-flex-basis: 83.333%;
+  flex-basis: 83.333%;
+  max-width: 83.333%;
+}
+
+.l-gridFlex_colXS-11 {
+  -ms-flex-preferred-size: 91.667%;
+  -webkit-flex-basis: 91.667%;
+  flex-basis: 91.667%;
+  max-width: 91.667%;
+}
+
+.l-gridFlex_colXS-12 {
+  -ms-flex-preferred-size: 100%;
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.l-gridFlex_colXS--offset-1 {
+  margin-left: 8.333%;
+}
+
+.l-gridFlex_colXS--offset-2 {
+  margin-left: 16.667%;
+}
+
+.l-gridFlex_colXS--offset-3 {
+  margin-left: 25%;
+}
+
+.l-gridFlex_colXS--offset-4 {
+  margin-left: 33.333%;
+}
+
+.l-gridFlex_colXS--offset-5 {
+  margin-left: 41.667%;
+}
+
+.l-gridFlex_colXS--offset-6 {
+  margin-left: 50%;
+}
+
+.l-gridFlex_colXS--offset-7 {
+  margin-left: 58.333%;
+}
+
+.l-gridFlex_colXS--offset-8 {
+  margin-left: 66.667%;
+}
+
+.l-gridFlex_colXS--offset-9 {
+  margin-left: 75%;
+}
+
+.l-gridFlex_colXS--offset-10 {
+  margin-left: 83.333%;
+}
+
+.l-gridFlex_colXS--offset-11 {
+  margin-left: 91.667%;
+}
+
+.l-gridFlex--startXS {
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.l-gridFlex--centerXS {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.l-gridFlex--endXS {
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.l-gridFlex--topXS {
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+.l-gridFlex--middle-xs {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.l-gridFlex--bottomXS {
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  -webkit-box-align: end;
+  align-items: flex-end;
+}
+
+.l-gridFlex--aroundXS {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.l-gridFlex--betweenXS {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.l-gridFlex_col--firstXS {
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  -webkit-box-ordinal-group: 0;
+  order: -1;
+}
+
+.l-gridFlex_col--lastXS {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  -webkit-box-ordinal-group: 2;
+  order: 1;
+}
+
+@media only screen and (min-width: pxToRem(568)) {
+
+  .l-gridFlex_colXSM {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    -webkit-flex-basis: 0;
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+  .l-gridFlex_colXSM-1 {
+    -ms-flex-preferred-size: 8.333%;
+    -webkit-flex-basis: 8.333%;
+    flex-basis: 8.333%;
+    max-width: 8.333%;
+  }
+
+  .l-gridFlex_colXSM-2 {
+    -ms-flex-preferred-size: 16.667%;
+    -webkit-flex-basis: 16.667%;
+    flex-basis: 16.667%;
+    max-width: 16.667%;
+  }
+
+  .l-gridFlex_colXSM-3 {
+    -ms-flex-preferred-size: 25%;
+    -webkit-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  .l-gridFlex_colXSM-4 {
+    -ms-flex-preferred-size: 33.333%;
+    -webkit-flex-basis: 33.333%;
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+  }
+
+  .l-gridFlex_colXSM-5 {
+    -ms-flex-preferred-size: 41.667%;
+    -webkit-flex-basis: 41.667%;
+    flex-basis: 41.667%;
+    max-width: 41.667%;
+  }
+
+  .l-gridFlex_colXSM-6 {
+    -ms-flex-preferred-size: 50%;
+    -webkit-flex-basis: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .l-gridFlex_colXSM-7 {
+    -ms-flex-preferred-size: 58.333%;
+    -webkit-flex-basis: 58.333%;
+    flex-basis: 58.333%;
+    max-width: 58.333%;
+  }
+
+  .l-gridFlex_colXSM-8 {
+    -ms-flex-preferred-size: 66.667%;
+    -webkit-flex-basis: 66.667%;
+    flex-basis: 66.667%;
+    max-width: 66.667%;
+  }
+
+  .l-gridFlex_colXSM-9 {
+    -ms-flex-preferred-size: 75%;
+    -webkit-flex-basis: 75%;
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+
+  .l-gridFlex_colXSM-10 {
+    -ms-flex-preferred-size: 83.333%;
+    -webkit-flex-basis: 83.333%;
+    flex-basis: 83.333%;
+    max-width: 83.333%;
+  }
+
+  .l-gridFlex_colXSM-11 {
+    -ms-flex-preferred-size: 91.667%;
+    -webkit-flex-basis: 91.667%;
+    flex-basis: 91.667%;
+    max-width: 91.667%;
+  }
+
+  .l-gridFlex_colXSM-12 {
+    -ms-flex-preferred-size: 100%;
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .l-gridFlex_colXSM--offset-1 {
+    margin-left: 8.333%;
+  }
+
+  .l-gridFlex_colXSM--offset-2 {
+    margin-left: 16.667%;
+  }
+
+  .l-gridFlex_colXXSMS--offset-3 {
+    margin-left: 25%;
+  }
+
+  .l-gridFlex_colXSM--offset-4 {
+    margin-left: 33.333%;
+  }
+
+  .l-gridFlex_colXSM--offset-5 {
+    margin-left: 41.667%;
+  }
+
+  .l-gridFlex_colXSM--offset-6 {
+    margin-left: 50%;
+  }
+
+  .l-gridFlex_colXSM--offset-7 {
+    margin-left: 58.333%;
+  }
+
+  .l-gridFlex_colXSM--offset-8 {
+    margin-left: 66.667%;
+  }
+
+  .l-gridFlex_colXSM--offset-9 {
+    margin-left: 75%;
+  }
+
+  .l-gridFlex_colXSM--offset-10 {
+    margin-left: 83.333%;
+  }
+
+  .l-gridFlex_colXSM--offset-11 {
+    margin-left: 91.667%;
+  }
+
+  .l-gridFlex--startXSM {
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .l-gridFlex--centerXSM {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .l-gridFlex--endXSM {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  .l-gridFlex--topXSM {
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+    align-items: flex-start;
+  }
+
+  .l-gridFlex--middleXSM {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+  .l-gridFlex--bottomXSM {
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    -webkit-box-align: end;
+    align-items: flex-end;
+  }
+
+  .l-gridFlex--aroundXSM {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .l-gridFlex--betweenXSM {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .l-gridFlex_col--firstXSM {
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    -webkit-box-ordinal-group: 0;
+    order: -1;
+  }
+
+  .l-gridFlex_col--lastXSM {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+  }
+}
+
+@media only screen and (min-width: pxToRem(768)) {
+
+  .l-gridFlex_colSM {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    -webkit-flex-basis: 0;
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+  .l-gridFlex_colSM-1 {
+    -ms-flex-preferred-size: 8.333%;
+    -webkit-flex-basis: 8.333%;
+    flex-basis: 8.333%;
+    max-width: 8.333%;
+  }
+
+  .l-gridFlex_colSM-2 {
+    -ms-flex-preferred-size: 16.667%;
+    -webkit-flex-basis: 16.667%;
+    flex-basis: 16.667%;
+    max-width: 16.667%;
+  }
+
+  .l-gridFlex_colSM-3 {
+    -ms-flex-preferred-size: 25%;
+    -webkit-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  .l-gridFlex_colSM-4 {
+    -ms-flex-preferred-size: 33.333%;
+    -webkit-flex-basis: 33.333%;
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+  }
+
+  .l-gridFlex_colSM-5 {
+    -ms-flex-preferred-size: 41.667%;
+    -webkit-flex-basis: 41.667%;
+    flex-basis: 41.667%;
+    max-width: 41.667%;
+  }
+
+  .l-gridFlex_colSM-6 {
+    -ms-flex-preferred-size: 50%;
+    -webkit-flex-basis: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .l-gridFlex_colSM-7 {
+    -ms-flex-preferred-size: 58.333%;
+    -webkit-flex-basis: 58.333%;
+    flex-basis: 58.333%;
+    max-width: 58.333%;
+  }
+
+  .l-gridFlex_colSM-8 {
+    -ms-flex-preferred-size: 66.667%;
+    -webkit-flex-basis: 66.667%;
+    flex-basis: 66.667%;
+    max-width: 66.667%;
+  }
+
+  .l-gridFlex_colSM-9 {
+    -ms-flex-preferred-size: 75%;
+    -webkit-flex-basis: 75%;
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+
+  .l-gridFlex_colSM-10 {
+    -ms-flex-preferred-size: 83.333%;
+    -webkit-flex-basis: 83.333%;
+    flex-basis: 83.333%;
+    max-width: 83.333%;
+  }
+
+  .l-gridFlex_colSM-11 {
+    -ms-flex-preferred-size: 91.667%;
+    -webkit-flex-basis: 91.667%;
+    flex-basis: 91.667%;
+    max-width: 91.667%;
+  }
+
+  .l-gridFlex_colSM-12 {
+    -ms-flex-preferred-size: 100%;
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .l-gridFlex_colSM--offset-1 {
+    margin-left: 8.333%;
+  }
+
+  .l-gridFlex_colSM--offset-2 {
+    margin-left: 16.667%;
+  }
+
+  .l-gridFlex_colSM--offset-3 {
+    margin-left: 25%;
+  }
+
+  .l-gridFlex_colSM--offset-4 {
+    margin-left: 33.333%;
+  }
+
+  .l-gridFlex_colSM--offset-5 {
+    margin-left: 41.667%;
+  }
+
+  .l-gridFlex_colSM--offset-6 {
+    margin-left: 50%;
+  }
+
+  .l-gridFlex_colSM--offset-7 {
+    margin-left: 58.333%;
+  }
+
+  .l-gridFlex_colSM--offset-8 {
+    margin-left: 66.667%;
+  }
+
+  .l-gridFlex_colSM--offset-9 {
+    margin-left: 75%;
+  }
+
+  .l-gridFlex_colSM--offset-10 {
+    margin-left: 83.333%;
+  }
+
+  .l-gridFlex_colSM--offset-11 {
+    margin-left: 91.667%;
+  }
+
+  .l-gridFlex--startSM {
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .l-gridFlex--centerSM {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .l-gridFlex--endSM {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  .l-gridFlex--topSM {
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+    align-items: flex-start;
+  }
+
+  .l-gridFlex--middleSM {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+  .l-gridFlex--bottomSM {
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    -webkit-box-align: end;
+    align-items: flex-end;
+  }
+
+  .l-gridFlex--aroundSM {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .l-gridFlex--betweenSM {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .l-gridFlex_col--firstSM {
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    -webkit-box-ordinal-group: 0;
+    order: -1;
+  }
+
+  .l-gridFlex_col--lastSM {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+  }
+}
+
+@media only screen and (min-width: pxToRem(768)sml) {
+
+  .l-gridFlex_colMD {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    -webkit-flex-basis: 0;
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+  .l-gridFlex_colMD-1 {
+    -ms-flex-preferred-size: 8.333%;
+    -webkit-flex-basis: 8.333%;
+    flex-basis: 8.333%;
+    max-width: 8.333%;
+  }
+
+  .l-gridFlex_colMD-2 {
+    -ms-flex-preferred-size: 16.667%;
+    -webkit-flex-basis: 16.667%;
+    flex-basis: 16.667%;
+    max-width: 16.667%;
+  }
+
+  .l-gridFlex_colMD-3 {
+    -ms-flex-preferred-size: 25%;
+    -webkit-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  .l-gridFlex_colMD-4 {
+    -ms-flex-preferred-size: 33.333%;
+    -webkit-flex-basis: 33.333%;
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+  }
+
+  .l-gridFlex_colMD-5 {
+    -ms-flex-preferred-size: 41.667%;
+    -webkit-flex-basis: 41.667%;
+    flex-basis: 41.667%;
+    max-width: 41.667%;
+  }
+
+  .l-gridFlex_colMD-6 {
+    -ms-flex-preferred-size: 50%;
+    -webkit-flex-basis: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .l-gridFlex_colMD-7 {
+    -ms-flex-preferred-size: 58.333%;
+    -webkit-flex-basis: 58.333%;
+    flex-basis: 58.333%;
+    max-width: 58.333%;
+  }
+
+  .l-gridFlex_colMD-8 {
+    -ms-flex-preferred-size: 66.667%;
+    -webkit-flex-basis: 66.667%;
+    flex-basis: 66.667%;
+    max-width: 66.667%;
+  }
+
+  .l-gridFlex_colMD-9 {
+    -ms-flex-preferred-size: 75%;
+    -webkit-flex-basis: 75%;
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+
+  .l-gridFlex_colMD-10 {
+    -ms-flex-preferred-size: 83.333%;
+    -webkit-flex-basis: 83.333%;
+    flex-basis: 83.333%;
+    max-width: 83.333%;
+  }
+
+  .l-gridFlex_colMD-11 {
+    -ms-flex-preferred-size: 91.667%;
+    -webkit-flex-basis: 91.667%;
+    flex-basis: 91.667%;
+    max-width: 91.667%;
+  }
+
+  .l-gridFlex_colMD-12 {
+    -ms-flex-preferred-size: 100%;
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .l-gridFlex_colMD--offset-1 {
+    margin-left: 8.333%;
+  }
+
+  .l-gridFlex_colMD--offset-2 {
+    margin-left: 16.667%;
+  }
+
+  .l-gridFlex_colMD--offset-3 {
+    margin-left: 25%;
+  }
+
+  .l-gridFlex_colMD--offset-4 {
+    margin-left: 33.333%;
+  }
+
+  .l-gridFlex_colMD--offset-5 {
+    margin-left: 41.667%;
+  }
+
+  .l-gridFlex_colMD--offset-6 {
+    margin-left: 50%;
+  }
+
+  .l-gridFlex_colMD--offset-7 {
+    margin-left: 58.333%;
+  }
+
+  .l-gridFlex_colMD--offset-8 {
+    margin-left: 66.667%;
+  }
+
+  .l-gridFlex_colMD--offset-9 {
+    margin-left: 75%;
+  }
+
+  .l-gridFlex_colMD--offset-10 {
+    margin-left: 83.333%;
+  }
+
+  .l-gridFlex_colMD--offset-11 {
+    margin-left: 91.667%;
+  }
+
+  .l-gridFlex--startMD {
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .l-gridFlex--centerMD {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .l-gridFlex--endMD {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  .l-gridFlex--topMD {
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+    align-items: flex-start;
+  }
+
+  .l-gridFlex--middleMD {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+  .l-gridFlex--bottomMD {
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    -webkit-box-align: end;
+    align-items: flex-end;
+  }
+
+  .l-gridFlex--aroundMD {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .l-gridFlex--betweenMD {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .l-gridFlex_col--firstMD {
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    -webkit-box-ordinal-group: 0;
+    order: -1;
+  }
+
+  .l-gridFlex_col--lastMD {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+  }
+}
+
+@media only screen and (min-width: pxToRem(1200)) {
+
+  .l-gridFlex_colLG {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    -webkit-flex-basis: 0;
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+  .l-gridFlex_colLG-1 {
+    -ms-flex-preferred-size: 8.333%;
+    -webkit-flex-basis: 8.333%;
+    flex-basis: 8.333%;
+    max-width: 8.333%;
+  }
+
+  .l-gridFlex_colLG-2 {
+    -ms-flex-preferred-size: 16.667%;
+    -webkit-flex-basis: 16.667%;
+    flex-basis: 16.667%;
+    max-width: 16.667%;
+  }
+
+  .l-gridFlex_colLG-3 {
+    -ms-flex-preferred-size: 25%;
+    -webkit-flex-basis: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  .l-gridFlex_colLG-4 {
+    -ms-flex-preferred-size: 33.333%;
+    -webkit-flex-basis: 33.333%;
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+  }
+
+  .l-gridFlex_colLG-5 {
+    -ms-flex-preferred-size: 41.667%;
+    -webkit-flex-basis: 41.667%;
+    flex-basis: 41.667%;
+    max-width: 41.667%;
+  }
+
+  .l-gridFlex_colLG-6 {
+    -ms-flex-preferred-size: 50%;
+    -webkit-flex-basis: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .l-gridFlex_colLG-7 {
+    -ms-flex-preferred-size: 58.333%;
+    -webkit-flex-basis: 58.333%;
+    flex-basis: 58.333%;
+    max-width: 58.333%;
+  }
+
+  .l-gridFlex_colLG-8 {
+    -ms-flex-preferred-size: 66.667%;
+    -webkit-flex-basis: 66.667%;
+    flex-basis: 66.667%;
+    max-width: 66.667%;
+  }
+
+  .l-gridFlex_colLG-9 {
+    -ms-flex-preferred-size: 75%;
+    -webkit-flex-basis: 75%;
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+
+  .l-gridFlex_colLG-10 {
+    -ms-flex-preferred-size: 83.333%;
+    -webkit-flex-basis: 83.333%;
+    flex-basis: 83.333%;
+    max-width: 83.333%;
+  }
+
+  .l-gridFlex_colLG-11 {
+    -ms-flex-preferred-size: 91.667%;
+    -webkit-flex-basis: 91.667%;
+    flex-basis: 91.667%;
+    max-width: 91.667%;
+  }
+
+  .l-gridFlex_colLG-12 {
+    -ms-flex-preferred-size: 100%;
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .l-gridFlex_colLG--offset-1 {
+    margin-left: 8.333%;
+  }
+
+  .l-gridFlex_colLG--offset-2 {
+    margin-left: 16.667%;
+  }
+
+  .l-gridFlex_colLG--offset-3 {
+    margin-left: 25%;
+  }
+
+  .l-gridFlex_colLG--offset-4 {
+    margin-left: 33.333%;
+  }
+
+  .l-gridFlex_colLG--offset-5 {
+    margin-left: 41.667%;
+  }
+
+  .l-gridFlex_colLG--offset-6 {
+    margin-left: 50%;
+  }
+
+  .l-gridFlex_colLG--offset-7 {
+    margin-left: 58.333%;
+  }
+
+  .l-gridFlex_colLG--offset-8 {
+    margin-left: 66.667%;
+  }
+
+  .l-gridFlex_colLG--offset-9 {
+    margin-left: 75%;
+  }
+
+  .l-gridFlex_colLG--offset-10 {
+    margin-left: 83.333%;
+  }
+
+  .l-gridFlex_colLG--offset-11 {
+    margin-left: 91.667%;
+  }
+
+  .l-gridFlex--startLG {
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .l-gridFlex--centerLG {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .l-gridFlex--endLG {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  .l-gridFlex--topLG {
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+    align-items: flex-start;
+  }
+
+  .l-gridFlex--middleLG {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+  .l-gridFlex--bottomLG {
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    -webkit-box-align: end;
+    align-items: flex-end;
+  }
+
+  .l-gridFlex--aroundLG {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .l-gridFlex--betweenLG {
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .l-gridFlex_col--firstLG {
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    -webkit-box-ordinal-group: 0;
+    order: -1;
+  }
+
+  .l-gridFlex_col--lastLG {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+  }
+}
+
+
+// Ainda não se sabe o motivo desta classe
+
+.l-gridFlex_containerFluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: pxToRem(20);
+  padding-left: pxToRem(20);
+}
+
+// MODIFICADORES PARA ROWS //////////////////////////////////////////////////////////////////////
+
+.l-gridFlex--start {
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.l-gridFlex--center {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.l-gridFlex--end {
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.l-gridFlex--top {
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+.l-gridFlex--middle {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.l-gridFlex--bottom {
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  -webkit-box-align: end;
+  align-items: flex-end;
+}
+
+.l-gridFlex--around {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.l-gridFlex--between {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+// MODIFICADORES PARA COLUMNS ///////////////////////////////////////////////////////////////////
+
+// Muda a direção para column (flex-direction)
+.l-gridFlex_col--dirColumn {
+  @include flexboxContainer(null, column, null, null, null, null);
+}
+
+// Alinha os itens para o começo (flex-start)
+.l-gridFlex_col--startItems {
+  @include flexboxContainer(null, null, null, null, flex-start, null);
+}
+
+// Alinha os itens para o fim (flex-end)
+.l-gridFlex_col--endItems {
+  @include flexboxContainer(null, null, null, null, flex-end, null);
+}
+
+// Alinha o conteúdo para o começo (flex-start)
+.l-gridFlex_col--startContent {
+  @include flexboxContainer(null, null, null, null, null, flex-start);
+}
+
+// Alinha o conteúdo para o fim (flex-end)
+.l-gridFlex_col--endContent {
+  @include flexboxContainer(null, null, null, null, null, flex-end);
+}
+
+// Troca a ordem de última coluna para primeira coluna
+.l-gridFlex_col--first {
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  -webkit-box-ordinal-group: 0;
+  order: -1;
+}
+// Troca a ordem de primeira coluna para última coluna
+.l-gridFlex_col--last {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  -webkit-box-ordinal-group: 2;
+  order: 1;
+}

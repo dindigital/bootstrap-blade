@@ -1,0 +1,28 @@
+// colaboradores: Carlos Augusto(email: carlos.xell.3@gmail.com)
+// Metodologias usadas: BEM(https://en.bem.info/)[ps: Uma variação da Metodologia será utilizada] / SMACSS(https://smacss.com/)
+
+// Estilos base
+@import '_base/_reset';
+@import '_base/_base';
+
+// Estilos para Layouts
+@import '_layout/_container';
+@import '_layout/_grids';
+@import '_layout/_header';
+@import '_layout/_footer';
+
+// Estilos de módulos
+@import '_modules/_forms';
+@import '_modules/_buttons';
+@import '_modules/_boxes';
+@import '_modules/_figures';
+@import '_modules/_formatting';
+
+// Estilos para classes de estado
+@import '_states/_states';
+
+// Estilos para classes de temas
+@import '_themes/_themeHome';
+
+// Estilos para fallbacks no IE9 ou outras correções
+@import '_hacks/_fallbacks';
