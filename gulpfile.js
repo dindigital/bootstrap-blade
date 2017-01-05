@@ -23,9 +23,9 @@ gulp.task('scripts', function() {
 
 gulp.task('concatjs', function(){
   return gulp.src([
-    './resources/assets/bower_components/angularjs/angular.min.js',
-    './resources/assets/bower_components/angular-route/angular-route.min.js',
-    './resources/assets/bower_components/ngMask/dist/ngMask.min.js',
+    './resources/assets/lib/angularjs/angular.min.js',
+    './resources/assets/lib/angular-route/angular-route.min.js',
+    './resources/assets/lib/ngMask/dist/ngMask.min.js',
   ])
   .pipe(concat('vendor.js'))
   .pipe(gulp.dest('./assets/js'));
