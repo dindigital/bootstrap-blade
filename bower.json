@@ -5,6 +5,6 @@
     "slicknav": "latest",
     "font-awesome": "latest",
     "bxslider-4": "4.2.5",
-    "din-style": "*"
+    "din-style-framework" : "1.1.7"
   }
 }
